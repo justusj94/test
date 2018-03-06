@@ -33,8 +33,7 @@ pipeline {
     stage('Deploy') {
       steps {
         sh 'echo cloning from justusj94'
-        sshPublisher(alwaysPublishFromMaster: true)
-        build 'ssh'
+        sshagent()
       }
     }
   }
