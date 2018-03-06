@@ -33,7 +33,7 @@ pipeline {
     }
     stage('Deploy') {
       steps {
-        sh 'echo cloning from justusj94'
+        sh 'ls -lh'
       }
     }
   }
