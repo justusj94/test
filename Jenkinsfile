@@ -4,6 +4,7 @@ pipeline {
     stage('Build') {
       steps {
         sh 'echo Build'
+        sh 'ls -lh'
       }
     }
     stage('Backend') {
@@ -33,7 +34,6 @@ pipeline {
     stage('Deploy') {
       steps {
         sh 'echo cloning from justusj94'
-        sshagent()
       }
     }
   }
