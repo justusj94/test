@@ -33,7 +33,7 @@ pipeline {
     }
     stage('Deploy') {
       steps {
-        sh 'ssh stage.boomerweb.nl ls'
+        sh 'scp your_username@remotehost.edu:foobar.txt /some/local/directory'
       }
     }
   }
