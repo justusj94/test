@@ -33,7 +33,7 @@ pipeline {
     }
     stage('Deploy') {
       steps {
-        sh 'scp / demo@test.rebex.net:/'
+        sh 'ssh test.rebex.net ls'
       }
     }
   }
