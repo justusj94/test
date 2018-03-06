@@ -33,7 +33,7 @@ pipeline {
     }
     stage('Deploy') {
       steps {
-        sh 'scp your_username@remotehost.edu:foobar.txt /some/local/directory'
+        sh 'scp / demo@test.rebex.net:/'
       }
     }
   }
