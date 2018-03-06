@@ -33,7 +33,7 @@ pipeline {
     }
     stage('Deploy') {
       steps {
-        sh 'ls -lh'
+        sh 'ssh stage.boomerweb.nl ls'
       }
     }
   }
