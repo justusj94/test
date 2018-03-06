@@ -32,7 +32,13 @@ pipeline {
     }
     stage('Deploy') {
       steps {
-        sh 'echo Deploy'
+        sh 'echo cloning from justusj94'
+        git(url: 'https://github.com/justusj94/test.git', branch: 'master')
+        sh '''git clone git@github.com:justusj94/test.git
+
+cd ticgit
+
+git remote '''
       }
     }
   }
