@@ -33,7 +33,7 @@ pipeline {
     }
     stage('Deploy') {
       steps {
-        sh 'ls'
+        sh 'ls ~/'
       }
     }
   }
