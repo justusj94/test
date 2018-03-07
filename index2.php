@@ -8,4 +8,4 @@
 
 echo "more info yet";
 ?>
-<a href="index2.php">index</a>
+<a href="index.php">index</a>
