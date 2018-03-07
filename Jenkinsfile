@@ -33,7 +33,7 @@ pipeline {
     }
     stage('Deploy') {
       steps {
-        sh 'ssh root@stage.boomerweb.nl ls'
+        sh 'ssh -oStrictHostKeyChecking=no root@stage.boomerweb.nl ls'
       }
     }
   }
