@@ -34,7 +34,6 @@ pipeline {
     stage('Deploy') {
       steps {
         sh 'ssh root@stage.boomerweb.nl ls'
-        sshPublisher(masterNodeName: 'kaas:worst')
       }
     }
   }
