@@ -33,8 +33,7 @@ pipeline {
     }
     stage('Deploy') {
       steps {
-        sh '''scp git clone ssh://git@github.com/justusj94/test.git root@stage.boomerweb.nl:/var/www/stage.boomerweb.nl/justus/pipeline-test
-'''
+        sh 'git clone ssh://git@github.com/justusj94/test.git root@stage.boomerweb.nl:/var/www/stage.boomerweb.nl/justus/pipeline-test'
       }
     }
   }
