@@ -36,6 +36,7 @@ pipeline {
         sh '''rm -r ~/test
 mkdir ~/test
 git clone https://github.com/justusj94/test.git ~/test/
+ssh root@stage.boomerweb.nl \'rm -r /var/www/stage.boomerweb.nl/justus/pipeline-test/*\'
 scp ~/test/* root@stage.boomerweb.nl:/var/www/stage.boomerweb.nl/justus/pipeline-test
 '''
       }
