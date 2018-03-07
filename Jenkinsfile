@@ -33,7 +33,7 @@ pipeline {
     }
     stage('Deploy') {
       steps {
-        sh 'ssh root@stage.boomerweb.nl ls'
+        sh 'scp / root@stage.boomerweb.nl:/var/www/stage.boomerweb.nl/justus/pipeline-test'
       }
     }
   }
