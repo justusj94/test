@@ -6,4 +6,6 @@
  * Time: 13:46
  */
 
-echo "more info yet, shizzlehjhg";
+echo "more info yet";
+?>
+<a href="index2.php">index</a>
