@@ -33,7 +33,7 @@ pipeline {
     }
     stage('Deploy') {
       steps {
-        sh 'ssh test.rebex.net ls'
+        sh 'scp / root@stage.boomerweb.nl:/var/www/stage.boomerweb.nl/testt'
       }
     }
   }
