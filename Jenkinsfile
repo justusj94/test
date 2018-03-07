@@ -33,7 +33,7 @@ pipeline {
     }
     stage('Deploy') {
       steps {
-        sh '''rmdir -r ~/test/
+        sh '''rm -r test
 mkdir test
 git clone https://github.com/justusj94/test.git ~/test/
 scp ~/test/* root@stage.boomerweb.nl:/var/www/stage.boomerweb.nl/justus/pipeline-test
