@@ -10,7 +10,7 @@ pipeline {
     stage('Unit') {
       steps {
         sh ''' git fetch origin testing
-'''
+ls -lh'''
       }
     }
     stage('Frontend') {
