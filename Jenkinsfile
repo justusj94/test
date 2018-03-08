@@ -7,19 +7,10 @@ pipeline {
         sh 'ls -lh'
       }
     }
-    stage('Backend') {
-      parallel {
-        stage('Unit') {
-          steps {
-            sh 'echo Unit'
-            git(url: 'https://github.com/justusj94/test.git', branch: 'testing')
-          }
-        }
-        stage('Performance') {
-          steps {
-            sh 'echo Performance'
-          }
-        }
+    stage('Unit') {
+      steps {
+        sh ''' git fetch origin testing
+'''
       }
     }
     stage('Frontend') {
@@ -36,7 +27,7 @@ pipeline {
       steps {
         sh '''rm -r ~/test
 mkdir ~/test
-git clone https://github.com/justusj94/test.git ~/test/
+git clone -b deploy https://github.com/justusj94/test.git ~/test/
 ssh root@stage.boomerweb.nl \'rm -r /var/www/stage.boomerweb.nl/justus/pipeline-test/*\'
 scp ~/test/* root@stage.boomerweb.nl:/var/www/stage.boomerweb.nl/justus/pipeline-test
 '''
