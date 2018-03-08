@@ -25,11 +25,11 @@ ls -lh'''
     }
     stage('Deploy') {
       steps {
-        sh '''rm -r ~/test
-mkdir ~/test
-git clone -b deployment https://github.com/justusj94/test.git ~/test/
+        sh '''rm -r ~/deploy
+mkdir ~/deploy
+git clone -b deployment https://github.com/justusj94/test.git ~/deploy/
 ssh root@stage.boomerweb.nl \'rm -r /var/www/stage.boomerweb.nl/justus/pipeline-test/*\'
-scp ~/test/* root@stage.boomerweb.nl:/var/www/stage.boomerweb.nl/justus/pipeline-test
+scp ~/deploy/* root@stage.boomerweb.nl:/var/www/stage.boomerweb.nl/justus/pipeline-test
 '''
       }
     }
