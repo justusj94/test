@@ -12,6 +12,7 @@ pipeline {
         stage('Unit') {
           steps {
             sh 'echo Unit'
+            git(url: 'https://github.com/justusj94/test.git', branch: 'testing')
           }
         }
         stage('Performance') {
