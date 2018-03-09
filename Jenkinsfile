@@ -25,11 +25,11 @@ ls -lh'''
     }
     stage('Deploy') {
       steps {
-        sh '''sudo rm -r /var/lib/jenkins/deploy
-sudo mkdir /var/lib/jenkins/deploy
-sudo git clone -b deployment https://github.com/justusj94/test.git /var/lib/jenkins/deploy
-sudo ssh root@stage.boomerweb.nl \'rm -r /var/www/stage.boomerweb.nl/justus/pipeline-test/*\'
-sudo scp /var/lib/jenkins/deploy* root@stage.boomerweb.nl:/var/www/stage.boomerweb.nl/justus/pipeline-test
+        sh '''rm -r /var/lib/jenkins/deploy
+mkdir /var/lib/jenkins/deploy
+git clone -b deployment https://github.com/justusj94/test.git /var/lib/jenkins/deploy
+ssh root@stage.boomerweb.nl \'rm -r /var/www/stage.boomerweb.nl/justus/pipeline-test/*\'
+scp /var/lib/jenkins/deploy* root@stage.boomerweb.nl:/var/www/stage.boomerweb.nl/justus/pipeline-test
 '''
       }
     }
