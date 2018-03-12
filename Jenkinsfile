@@ -11,8 +11,7 @@ pipeline {
       parallel {
         stage('Unit') {
           steps {
-            sh '''phpunit --bootstrap /var/lib/jenkins/test/vendor/autoload.php /var/lib/jenkins/test/vendor/phpunit/phpunit/tests/EmailTest
-'''
+            sh 'phpunit --bootstrap Email.php tests/EmailTest'
           }
         }
         stage('Performance') {
