@@ -7,10 +7,19 @@ pipeline {
         sh 'ls -lh'
       }
     }
-    stage('Unit') {
-      steps {
-        sh ''' git fetch origin testing
-ls -lh'''
+    stage('Backend') {
+      parallel {
+        stage('Unit') {
+          steps {
+            sh '''phpunit --bootstrap /var/lib/jenkins/test/vendor/autoload.php /var/lib/jenkins/test/vendor/phpunit/phpunit/tests/EmailTest
+'''
+          }
+        }
+        stage('Performance') {
+          steps {
+            sh 'echo Performance'
+          }
+        }
       }
     }
     stage('Frontend') {
@@ -25,11 +34,11 @@ ls -lh'''
     }
     stage('Deploy') {
       steps {
-        sh '''rm -r /var/lib/jenkins/deploy
-mkdir /var/lib/jenkins/deploy
-git clone -b deployment https://github.com/justusj94/test.git /var/lib/jenkins/deploy
+        sh '''rm -r ~/test
+mkdir ~/test
+git clone https://github.com/justusj94/test.git ~/test/
 ssh root@stage.boomerweb.nl \'rm -r /var/www/stage.boomerweb.nl/justus/pipeline-test/*\'
-scp /var/lib/jenkins/deploy* root@stage.boomerweb.nl:/var/www/stage.boomerweb.nl/justus/pipeline-test
+scp ~/test/* root@stage.boomerweb.nl:/var/www/stage.boomerweb.nl/justus/pipeline-test
 '''
       }
     }
