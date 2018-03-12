@@ -38,9 +38,7 @@ pipeline {
 rm -r ~/deploy
 mkdir ~/deploy
 git clone https://github.com/justusj94/test.git ~/deploy/
-ssh root@stage.boomerweb.nl \'rm -r /var/www/stage.boomerweb.nl/justus/pipeline-test/*\'
-scp ~/deploy/* root@stage.boomerweb.nl:/var/www/stage.boomerweb.nl/justus/pipeline-test
-'''
+ssh root@stage.boomerweb.nl '''
       }
     }
   }
