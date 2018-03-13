@@ -37,6 +37,10 @@ pipeline {
 git pull
 git merge test
 git commit -am "Merged develop branch to master"
+
+git config --global user.email "you@example.com"
+git config --global user.name "Your Name"
+
 git push origin master
 
 cd /var/lib/jenkins
