@@ -8,4 +8,4 @@
 
 echo "more info yet";
 ?>
-<div style="background-color: blue;"><a href="index.php">index</a></div>
+<div style="background-color: beige;"><a href="index.php">index</a></div>
