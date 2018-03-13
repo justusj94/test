@@ -34,9 +34,8 @@ pipeline {
     stage('Deploy') {
       steps {
         sh '''git checkout test
-git tag -a tagName -m "Your tag comment"
 git merge test
-git commit -am "Merged develop branch to master
+git commit -am "Merged develop branch to master"
 git push origin master
 
 cd /var/lib/jenkins
