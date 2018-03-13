@@ -35,6 +35,7 @@ pipeline {
       steps {
         sh '''git checkout test
 git merge test
+git pull
 git commit -am "Merged develop branch to master"
 git push origin master
 
