@@ -33,7 +33,7 @@ pipeline {
     }
     stage('Deploy') {
       steps {
-        sh '''git checkout -b test https://github.com/justusj94/test.git
+        sh '''git checkout test
 git tag -a tagName -m "Your tag comment"
 git merge test
 git commit -am "Merged develop branch to master
