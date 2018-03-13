@@ -33,7 +33,7 @@ pipeline {
     }
     stage('Deploy') {
       steps {
-        sh '''git url: "ssh://git@github.com:justusj94/test.git", credentialsId: \'jenkins_ssh_key\', branch: test
+        sh '''git checkout ssh://git@github.com:justusj94/test.git
 git tag -a tagName -m "Your tag comment"
 git merge test
 git commit -am "Merged develop branch to master
