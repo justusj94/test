@@ -33,11 +33,15 @@ pipeline {
     }
     stage('Deploy') {
       steps {
-        sh '''cd /var/lib/jenkins
+        sh '''git url: "ssh://git@github.com:justusj94/test.git", credentialsId: \'jenkins_ssh_key\', branch: test
+git tag -a tagName -m "Your tag comment"
+git merge test
+git commit -am "Merged develop branch to master
+git push origin master
+
+cd /var/lib/jenkins
 rm -r ~/deploy
 mkdir ~/deploy
-git checkout master
-git merge test
 git clone https://github.com/justusj94/test.git ~/deploy/
 ssh root@stage.boomerweb.nl \'rm -r /var/www/stage.boomerweb.nl/justus/pipeline-test/*\'
 scp ~/deploy/* root@stage.boomerweb.nl:/var/www/stage.boomerweb.nl/justus/pipeline-test
