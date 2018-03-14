@@ -35,6 +35,12 @@ pipeline {
       steps {
         sh '''git remote set-url origin git@github.com:justusj94/test.git
 
+#move to repo
+git checkout test
+
+#commit changes if any
+git commit -m "Commit message jonge"
+
 #merge with master
 git merge master
 
