@@ -38,6 +38,7 @@ git checkout master
 git add .
 git commit -m "Merge test branch with master branch" 
 git pull origin master
+git checkout test
 git merge test
 git push origin master
 
