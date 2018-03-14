@@ -40,7 +40,6 @@ pipeline {
 
 #when no conflicts merge this branch with master
 git checkout master
-git pull master 
 git merge --no-ff test
 
 
