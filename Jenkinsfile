@@ -34,7 +34,7 @@ pipeline {
     stage('Deploy') {
       steps {
         sh '''git remote set-url origin git@github.com:justusj94/test.git
-git pull -b test
+git pull origin test
 #merge with master
 #git merge master
 
