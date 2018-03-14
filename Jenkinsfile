@@ -35,11 +35,16 @@ pipeline {
       steps {
         sh '''git remote set-url origin git@github.com:justusj94/test.git
 
+#move to test branch
+git checkout test
+git pull origin test
+
 #merge with master
-git merge master
+git merge --no-ff master
 
 #when no conflicts merge this branch with master
-git checkout master 
+git checkout master
+git pull origin master
 git merge --no-ff test
 
 
