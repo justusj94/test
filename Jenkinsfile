@@ -36,7 +36,7 @@ pipeline {
         sh '''git remote set-url origin git@github.com:justusj94/test.git
 
 #merge with master
-git merge master
+#git merge master
 
 #when no conflicts merge this branch with master
 git checkout master 
