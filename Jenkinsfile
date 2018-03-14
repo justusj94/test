@@ -37,12 +37,14 @@ pipeline {
 
 #move to test branch
 git checkout test
+git pull test
 
 #merge with master
 git merge --no-ff master
 
 #when no conflicts merge this branch with master
 git checkout master
+git pull master
 git merge --no-ff test
 
 
