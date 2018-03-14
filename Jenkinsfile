@@ -34,13 +34,15 @@ pipeline {
     stage('Deploy') {
       steps {
         sh '''git remote set-url origin git@github.com:justusj94/test.git
-git pull origin test
+git merge origin master
+#git add .
+
 #merge with master
 #git merge master
 
 #when no conflicts merge this branch with master
-git checkout master
-git merge --no-ff test
+#git checkout master
+#git merge --no-ff test
 
 
 cd /var/lib/jenkins
