@@ -33,17 +33,17 @@ pipeline {
     }
     stage('Deploy') {
       steps {
-        sh '''git checkout test
+        sh '''git remote set-url origin git@github.com:justusj94/test.git
+git checkout master 
 git merge test
-git commit -am "Merged test branch to master"
 git push origin master
 
 cd /var/lib/jenkins
 rm -r ~/deploy
 mkdir ~/deploy
 git clone https://github.com/justusj94/test.git ~/deploy/
-ssh root@stage.boomerweb.nl \'rm -r /var/www/stage.boomerweb.nl/justus/pipeline-test/*\'
-scp ~/deploy/* root@stage.boomerweb.nl:/var/www/stage.boomerweb.nl/justus/pipeline-test
+ssh -i ~/.ssh/stage-boomerweb-ssh root@stage.boomerweb.nl \'rm -r /var/www/stage.boomerweb.nl/justus/pipeline-test/*\'
+scp -i ~/.ssh/stage-boomerweb-ssh ~/deploy/* root@stage.boomerweb.nl:/var/www/stage.boomerweb.nl/justus/pipeline-test
 '''
       }
     }
