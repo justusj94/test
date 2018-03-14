@@ -23,7 +23,7 @@ pipeline {
     }
     stage('Frontend') {
       steps {
-        sh 'echo Frontend'
+        sh '/home/justus/node_modules/karma/bin/karma start'
       }
     }
     stage('Static Analysis') {
