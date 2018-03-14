@@ -23,7 +23,9 @@ pipeline {
     }
     stage('Frontend') {
       steps {
-        sh '/home/justus/node_modules/karma/bin/karma start '
+        sh '''cd /home/justus/
+
+node_modules/karma/bin/karma start '''
       }
     }
     stage('Static Analysis') {
