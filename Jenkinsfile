@@ -36,7 +36,7 @@ pipeline {
         sh '''git remote set-url origin git@github.com:justusj94/test.git
 
 #merge with master
-git commit -a ORIG_HEAD
+git commit -m "Commit message jonge"
 
 git merge master
 
