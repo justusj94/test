@@ -35,6 +35,7 @@ pipeline {
       steps {
         sh '''git remote set-url origin git@github.com:justusj94/test.git
 git checkout master 
+git pull origin master
 git merge test
 git push origin master
 
