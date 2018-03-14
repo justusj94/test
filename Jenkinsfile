@@ -34,7 +34,7 @@ pipeline {
     stage('Deploy') {
       steps {
         sh '''git remote set-url origin git@github.com:justusj94/test.git
-git checkout -b test
+git checkout test
 git add .
 git commit -a -m \'Merge test branch with master branch\'
 git checkout master
