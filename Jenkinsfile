@@ -35,7 +35,7 @@ pipeline {
       steps {
         sh '''git checkout test
 git merge test
-git commit -am "Merged develop branch to master"
+git commit -am "Merged test branch to master"
 git push origin master
 
 cd /var/lib/jenkins
