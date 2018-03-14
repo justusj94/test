@@ -25,7 +25,7 @@ pipeline {
       steps {
         sh '''cd /home/justus/
 
-~/node_modules/karma/bin/karma start '''
+node_modules/karma/bin/karma start '''
       }
     }
     stage('Static Analysis') {
