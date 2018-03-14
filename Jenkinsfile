@@ -39,7 +39,8 @@ pipeline {
 #git merge master
 
 #when no conflicts merge this branch with master
-git checkout master 
+git checkout master
+git pull upstream master 
 git merge --no-ff test
 
 
