@@ -5,3 +5,4 @@
 *test.iml
 *.gitignore
 *tests
+*JenkinsFile
