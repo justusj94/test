@@ -40,6 +40,7 @@ node_modules/karma/bin/karma start '''
 #move to test branch
 git checkout test
 git pull origin test
+git commit -am "Merge with Master"
 
 #when no conflicts merge this branch with master
 git checkout master
