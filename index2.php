@@ -11,5 +11,5 @@ echo "more info yet";
 <div style="background-color: skyblue;"><a href="index.php">index</a></div>
 <br>
 <div style="background-color: darkred">
-    Nice random info blah blah a!
+    Nice random info!
 </div>
