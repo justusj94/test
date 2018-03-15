@@ -41,13 +41,15 @@ node_modules/karma/bin/karma start '''
 git checkout test
 git pull origin test
 
-#merge with master
-git merge --no-ff master
-
 #when no conflicts merge this branch with master
 git checkout master
 git pull origin master
+
+#merge with master
+#git merge --no-ff master
+
 git merge --no-ff test
+git push
 
 
 cd /var/lib/jenkins
