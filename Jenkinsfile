@@ -45,6 +45,7 @@ git pull origin master
 git checkout test
 git pull origin test
 git commit -am \'Merge Test branch with Master\'
+git push
 
 #merge with master
 #git merge --no-ff master
