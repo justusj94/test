@@ -37,20 +37,19 @@ node_modules/karma/bin/karma start '''
       steps {
         sh '''git remote set-url origin git@github.com:justusj94/test.git
 
-#when no conflicts merge this branch with master
-git checkout master
-git pull origin master
-
 #move to test branch
 git checkout test
 git pull origin test
-git commit -am \'Merge Test branch with Master\'
-git push
+
+#when no conflicts merge this branch with master
+git checkout master
+git pull origin master
 
 #merge with master
 #git merge --no-ff master
 
 git merge --no-ff test
+git push
 
 
 cd /var/lib/jenkins
