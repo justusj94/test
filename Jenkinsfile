@@ -26,7 +26,7 @@ cp tests/* ~/test/*
         sh '''git remote set-url origin git@github.com:justusj94/test.git
 
 #move to master branch and pull from test
-git checkout origin master
+git checkout origin
 git pull origin test
 
 #merge test with master branch
