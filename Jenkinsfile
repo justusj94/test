@@ -3,34 +3,17 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'echo Build'
         sh 'ls -lh'
       }
     }
-    stage('Backend') {
-      parallel {
-        stage('Unit') {
-          steps {
-            sh 'phpunit --bootstrap Email.php tests/EmailTest'
-          }
-        }
-        stage('Performance') {
-          steps {
-            sh 'echo Performance'
-          }
-        }
+    stage('PHPUnit') {
+      steps {
+        sh 'phpunit --bootstrap Email.php tests/EmailTest'
       }
     }
-    stage('Frontend') {
+    stage('Karma Unit Test') {
       steps {
-        sh '''cd /home/justus/
-
-node_modules/karma/bin/karma start '''
-      }
-    }
-    stage('Static Analysis') {
-      steps {
-        sh 'echo Static'
+        sh 'karma start '
       }
     }
     stage('Deploy') {
@@ -52,8 +35,8 @@ mkdir -p ~/deploy
 
 #clone repository and deploy to remote server
 git clone https://github.com/justusj94/test.git ~/deploy
-ssh -i ~/.ssh/stage-boomerweb-ssh root@stage.boomerweb.nl \'rm -r -f /var/www/stage.boomerweb.nl/justus/pipeline-test/*\'
-scp -r -i ~/.ssh/stage-boomerweb-ssh ~/deploy/* root@stage.boomerweb.nl:/var/www/stage.boomerweb.nl/justus/pipeline-test
+ssh -i ~/.ssh/ssh-boomerweb root@stage.boomerweb.nl \'rm -r -f /var/www/stage.boomerweb.nl/justus/pipeline-test/*\'
+scp -r -i ~/.ssh/ssh-boomerweb ~/deploy/* root@stage.boomerweb.nl:/var/www/stage.boomerweb.nl/justus/pipeline-test
 '''
       }
     }
