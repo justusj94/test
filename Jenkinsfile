@@ -48,7 +48,6 @@ git checkout master
 #merge with master
 #git merge --no-ff master
 git merge --no-ff test
-git push
 
 
 cd /var/lib/jenkins
