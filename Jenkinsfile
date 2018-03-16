@@ -57,7 +57,7 @@ cd /var/lib/jenkins
 rm -r ~/deploy
 mkdir ~/deploy
 git clone https://github.com/justusj94/test.git ~/deploy
-ssh -i ~/.ssh/stage-boomerweb-ssh root@stage.boomerweb.nl \'rm -r /var/www/stage.boomerweb.nl/justus/pipeline-test/*\'
+ssh -i ~/.ssh/stage-boomerweb-ssh root@stage.boomerweb.nl \'rm -r -f /var/www/stage.boomerweb.nl/justus/pipeline-test/*\'
 scp -r -i ~/.ssh/stage-boomerweb-ssh ~/deploy/* root@stage.boomerweb.nl:/var/www/stage.boomerweb.nl/justus/pipeline-test
 '''
       }
