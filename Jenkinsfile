@@ -51,7 +51,9 @@ node_modules/karma/bin/karma start '''
 
 git checkout master
 git pull origin test 
-git merge origin test
+git add --all
+git commit -m "Merge test branch with master"
+git merge test
 git push origin master
 
 cd /var/lib/jenkins
