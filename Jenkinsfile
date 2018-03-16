@@ -13,9 +13,9 @@ pipeline {
     }
     stage('Karma Unit Test') {
       steps {
-        sh '''source ~/.nvm/nvm.sh
-~/nvm use stable
-~/karma start '''
+        sh '''cd /
+nvm --version
+'''
       }
     }
     stage('Deploy') {
