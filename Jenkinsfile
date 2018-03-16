@@ -13,8 +13,8 @@ pipeline {
     }
     stage('Karma Unit Test') {
       steps {
-        sh '''nvm use stable
-karma start '''
+        sh '''~/nvm use stable
+~/karma start '''
       }
     }
     stage('Deploy') {
