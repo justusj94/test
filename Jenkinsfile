@@ -13,7 +13,8 @@ pipeline {
     }
     stage('Karma Unit Test') {
       steps {
-        sh '''ls -lh
+        sh '''pwd
+ls -lh
 
 ~/node_modules/karma/bin/karma start ~/karma.conf.js
 '''
