@@ -49,6 +49,8 @@ node_modules/karma/bin/karma start '''
 #git merge --no-ff master
 #git merge --no-ff test
 
+git pull --rebase origin master
+git push origin master
 
 git checkout master
 git merge --no-ff test 
