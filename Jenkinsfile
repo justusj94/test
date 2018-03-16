@@ -37,20 +37,11 @@ node_modules/karma/bin/karma start '''
       steps {
         sh '''git remote set-url origin git@github.com:justusj94/test.git
 
-#move to test branch
-#git checkout test
-#git pull origin test
-
-#when no conflicts merge this branch with master
-#git checkout master
-#git pull origin master
-
-#merge with master
-#git merge --no-ff master
-#git merge --no-ff test
-
+#move to master branch and pull from test
 git checkout master
 git pull origin test
+
+#merge test with master branch
 git merge --no-ff test 
 git push -u origin master
 
@@ -58,6 +49,7 @@ cd /var/lib/jenkins
 #remove and create deploy folder
 rm -r -f ~/deploy
 mkdir -p ~/deploy
+
 #clone repository and deploy to remote server
 git clone https://github.com/justusj94/test.git ~/deploy
 ssh -i ~/.ssh/stage-boomerweb-ssh root@stage.boomerweb.nl \'rm -r -f /var/www/stage.boomerweb.nl/justus/pipeline-test/*\'
