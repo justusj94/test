@@ -54,8 +54,10 @@ git merge --no-ff test
 git push -u origin master
 
 cd /var/lib/jenkins
-rm -r ~/deploy
-mkdir ~/deploy
+#remove and create deploy folder
+rm -r -f ~/deploy
+mkdir -p ~/deploy
+#clone repository and deploy to remote server
 git clone https://github.com/justusj94/test.git ~/deploy
 ssh -i ~/.ssh/stage-boomerweb-ssh root@stage.boomerweb.nl \'rm -r -f /var/www/stage.boomerweb.nl/justus/pipeline-test/*\'
 scp -r -i ~/.ssh/stage-boomerweb-ssh ~/deploy/* root@stage.boomerweb.nl:/var/www/stage.boomerweb.nl/justus/pipeline-test
