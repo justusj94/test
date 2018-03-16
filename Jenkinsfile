@@ -15,7 +15,7 @@ pipeline {
       steps {
         sh '''rm -r -f ~/test
 mkdir -p ~/test
-cp -r tests/* ~/test/*
+cp tests/* ~/test/*
 
 ~/node_modules/karma/bin/karma start ~/karma.conf.js
 '''
