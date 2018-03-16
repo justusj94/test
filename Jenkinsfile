@@ -13,8 +13,7 @@ pipeline {
     }
     stage('Karma Unit Test') {
       steps {
-        sh '''cd /
-nvm --version
+        sh '''./node_modules/karma/bin/karma start
 '''
       }
     }
