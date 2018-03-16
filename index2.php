@@ -10,6 +10,6 @@ echo "more info yet";
 ?>
 <div style="background-color: skyblue;"><a href="index.php">index</a></div>
 <br>
-<div style="background-color: darkred">
+<div style="background-color: darkgoldenrod">
     Nice random info!
 </div>
