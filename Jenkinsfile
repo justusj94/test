@@ -49,11 +49,9 @@ node_modules/karma/bin/karma start '''
 #git merge --no-ff master
 #git merge --no-ff test
 
+
 git checkout master
-git pull origin test 
-git add --all
-git commit -m "Merge test branch with master"
-git merge test
+git merge --no-ff test 
 git push origin master
 
 cd /var/lib/jenkins
