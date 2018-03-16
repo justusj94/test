@@ -13,4 +13,5 @@ echo "more info yet";
 
 <div style="background-color: darkgoldenrod">
     Nice random info!
+    Random text....
 </div>
