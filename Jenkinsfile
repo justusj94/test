@@ -13,9 +13,8 @@ pipeline {
     }
     stage('Karma Unit Test') {
       steps {
-        sh '''ls -lh
-rm -r -f test
-mkdir -p test
+        sh '''rm -r -f ~/test
+mkdir -p ~/test
 cp -r tests ~/test/*
 
 ~/node_modules/karma/bin/karma start ~/karma.conf.js
