@@ -13,7 +13,7 @@ pipeline {
     }
     stage('Karma Unit Test') {
       steps {
-        sh 'karma start '
+        sh '~/karma start '
       }
     }
     stage('Deploy') {
