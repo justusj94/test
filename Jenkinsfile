@@ -53,7 +53,7 @@ git checkout master
 git pull origin test
 git add --all
 git commit -m "Merge test branch with master"
-git push origin maste
+git push origin master
 
 cd /var/lib/jenkins
 rm -r ~/deploy
