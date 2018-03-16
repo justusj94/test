@@ -50,7 +50,6 @@ node_modules/karma/bin/karma start '''
 #git merge --no-ff test
 
 git checkout master
-git pull origin test
 git merge --no-ff test 
 git push -u origin master
 
