@@ -27,7 +27,7 @@ cp tests/* ~/test/*
 
 #move to master branch and pull from test
 git checkout HEAD
-git pull master
+git checkout master
 git pull origin test
 
 #merge test with master branch
