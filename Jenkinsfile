@@ -24,7 +24,6 @@ cp tests/* ~/test/*
     stage('Deploy') {
       steps {
         sh '''git remote set-url origin git@github.com:justusj94/test.git
-git fetch
 
 #move to master branch and pull from test
 git checkout master
