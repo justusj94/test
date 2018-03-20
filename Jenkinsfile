@@ -28,11 +28,11 @@ git remote add upstream git@github.com:justusj94/test.git
 
 #move to master branch and pull from test
 git checkout master
-git pull origin test
+git pull upstream/test
 
 #merge test with master branch
-git merge --no-ff origin test 
-git push -u origin master
+git merge --no-ff upstream/test 
+git push -u upstream/master
 
 cd /var/lib/jenkins
 #remove and create deploy folder
