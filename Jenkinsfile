@@ -24,13 +24,15 @@ cp tests/* ~/test/*
     stage('Deploy') {
       steps {
         sh '''git remote set-url origin git@github.com:justusj94/test.git
+git remote show origin
 
 #move to master branch and pull from test
-git checkout -f master
-git pull -f test
+git checkout HEAD
+#git checkout master
+git pull origin test
 
 #merge test with master branch
-git merge --no-ff test 
+git merge --no-ff origin test 
 git push -u origin master
 
 cd /var/lib/jenkins
