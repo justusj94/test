@@ -31,7 +31,7 @@ git checkout master
 git pull origin/test
 
 #merge test with master branch
-git merge --no-ff origin/test 
+git merge --no-ff test 
 git push -u origin/master
 
 cd /var/lib/jenkins
