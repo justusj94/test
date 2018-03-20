@@ -36,7 +36,8 @@ git pull origin test
 #merge test with master branch
 #git merge --no-ff origin test 
 git merge --no-ff upstream/test
-git push -u origin master
+#git push -u origin master
+git push -u upstream/master
 
 cd /var/lib/jenkins
 #remove and create deploy folder
