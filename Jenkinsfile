@@ -28,6 +28,7 @@ git remote show origin
 
 #move to master branch and pull from test
 git checkout HEAD
+git fetch -all
 #git checkout master
 git pull origin test
 
