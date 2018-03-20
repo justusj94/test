@@ -27,8 +27,8 @@ cp tests/* ~/test/*
 git remote show origin
 
 #move to master branch and pull from test
-#git checkout HEAD
-git checkout master
+git checkout HEAD
+#git checkout master
 git pull origin test
 
 #merge test with master branch
