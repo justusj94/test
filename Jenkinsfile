@@ -38,7 +38,7 @@ cp tests/* ~/test/*
 
 
 
-git remote add upstream git@github.com:justusj94/test.git
+#git remote add upstream git@github.com:justusj94/test.git
 git checkout master
 git fetch --all
 git merge upstream/master
