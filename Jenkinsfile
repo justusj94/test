@@ -28,11 +28,11 @@ cp tests/* ~/test/*
 
 #move to master branch and pull from test
 git checkout master
-git pull upstream/test
+git pull origin/test
 
 #merge test with master branch
-git merge --no-ff upstream/test 
-git push -u upstream/master
+git merge --no-ff origin/test 
+git push -u origin/master
 
 cd /var/lib/jenkins
 #remove and create deploy folder
