@@ -7,12 +7,7 @@ pipeline {
   }
   stages {
     stage('Build') {
-      agent {
-        dockerfile {
-          filename 'Dockerfile'
-        }
-        
-      }
+      agent any
       steps {
         sh 'ls -lh'
       }
