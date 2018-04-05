@@ -1,7 +1,4 @@
 # Use an official Python runtime as a parent image
-FROM ubuntu
+FROM node:9.10.1-wheezy
 
-RUN apt-get update
-RUN apt-get -y install nodejs
-RUN apt-get -y install npm
-RUN npm -v
+RUN npm install karma
