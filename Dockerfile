@@ -2,5 +2,6 @@
 FROM ubuntu
 
 RUN apt-get update
-RUN apt-get install nodejs
+RUN apt-get -y install nodejs
+sudo apt-get -y install npm
 RUN npm -v
