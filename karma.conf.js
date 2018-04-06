@@ -8,7 +8,7 @@ module.exports = function(config) {
         plugins: [
             'karma-jasmine',
             'karma-junit-reporter',
-            'karma-chrome-launcher',
+            'karma-phantomjs-launcher'
         ],
         preprocessors: {},
         reporters: ['dots'],
@@ -16,7 +16,7 @@ module.exports = function(config) {
         colors: true,
         logLevel: config.LOG_INFO,
         autoWatch: true,
-        browsers: ['Chrome'],
+        browsers: ['PhantomJS'],
         singleRun: true
     });
 };
