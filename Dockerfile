@@ -1,5 +1,6 @@
 # Use an official Python runtime as a parent image
 FROM node:carbon
+USER root
 #nginx:1.12.2
 #COPY . /usr/share/nginx/html
 #RUN apt-get update
