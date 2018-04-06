@@ -23,7 +23,7 @@ whoami'''
         sh '''#rm -r -f ~/test/*
 #mkdir -p ~/test/*
 #cp tests/* ~/test/*
-
+pwd
 npm test'''
       }
     }
