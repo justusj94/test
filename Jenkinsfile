@@ -7,6 +7,12 @@ pipeline {
   }
   stages {
     stage('Build') {
+      agent {
+        dockerfile {
+          filename 'Dockerfile'
+        }
+        
+      }
       steps {
         sh '''nodejs --version
 npm -v
