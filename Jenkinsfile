@@ -23,7 +23,9 @@ npm -v'''
 #mkdir -p ~/test/*
 #cp tests/* ~/test/*
 
-~/node_modules/karma/bin/karma start ~/karma.conf.js'''
+find / -type d -name \'node_modules\'
+
+~/node_modules/karma/bin/karma start karma.conf.js'''
       }
     }
     stage('Deploy') {
