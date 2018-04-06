@@ -27,7 +27,7 @@ npm -v'''
 ls -lh
 
 npm list -g
-~/usr/local/lib/node_modules/karma/bin/karma start'''
+karma start'''
       }
     }
     stage('Deploy') {
