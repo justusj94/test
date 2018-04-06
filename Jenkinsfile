@@ -24,9 +24,7 @@ whoami'''
 #mkdir -p ~/test/*
 #cp tests/* ~/test/*
 
-ls -lh
-whoami
-karma start karma.conf.js'''
+npm test'''
       }
     }
     stage('Deploy') {
