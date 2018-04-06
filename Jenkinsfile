@@ -24,7 +24,7 @@ npm -v'''
 #cp tests/* ~/test/*
 
 #find / -type d -name \'karma\'
-
+ls -lh
 ~/node_modules/karma/bin/karma start karma.conf.js'''
       }
     }
