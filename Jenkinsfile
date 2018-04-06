@@ -25,7 +25,7 @@ npm -v'''
 
 #find / -type d -name \'karma\'
 ls -lh
-~/node_modules/karma/bin/karma start karma.conf.js'''
+npm karma start karma.conf.js'''
       }
     }
     stage('Deploy') {
