@@ -6,6 +6,6 @@ FROM node:carbon
 #RUN apt-get install -y curl && curl -sL https://deb.nodesource.com/setup_6.x | bash - && apt-get install -y nodejs
 COPY . /app
 WORKDIR /app
-RUN npm install
+RUN npm install && npm install --only=dev
 #RUN npm install -g karma@2.0.0 karma-jasmine@1.1.1 karma-junit-reporter@1.2.0 jasmine-core@3.1.0 karma-chrome-launcher@2.2.0 --save-dev
 #RUN npm install --save-dev karma@2.0.0 karma-jasmine@1.1.1 karma-junit-reporter@1.2.0 jasmine-core@3.1.0 karma-chrome-launcher@2.2.0
