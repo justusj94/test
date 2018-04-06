@@ -8,7 +8,7 @@ module.exports = function(config) {
         plugins: [
             'karma-jasmine',
             'karma-junit-reporter',
-            'phantom',
+            'karma-chrome-launcher',
         ],
         preprocessors: {},
         reporters: ['dots'],
