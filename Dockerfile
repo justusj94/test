@@ -1,7 +1,7 @@
 # Use an official Python runtime as a parent image
 FROM node:carbon
 USER root
-RUN chown -R node /usr
+RUN chown -R 777 node /usr
 #nginx:1.12.2
 #COPY . /usr/share/nginx/html
 #RUN apt-get update
