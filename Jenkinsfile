@@ -23,7 +23,12 @@ npm -v'''
 #mkdir -p ~/test/*
 #cp tests/* ~/test/*
 
-~/node_modules/karma/bin/karma start ~/karma.conf.js'''
+#find / -type d -name \'karma\'
+ls -lh
+
+npm install --save-dev karma karma-jasmine karma-junit-reporter jasmine-core karma-chrome-launcher
+npm list -g
+~/usr/local/lib/node_modules/karma/bin/karma start'''
       }
     }
     stage('Deploy') {
