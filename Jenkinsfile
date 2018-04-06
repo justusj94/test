@@ -8,7 +8,9 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'node --version'
+        sh '''node --version
+npm --version
+npm install karma@2.0.0 karma-jasmine@1.1.1 karma-junit-reporter@1.2.0 jasmine-core@3.1.0 phantom@4.0.12 --save-dev'''
       }
     }
     stage('PHPUnit') {
