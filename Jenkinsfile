@@ -25,7 +25,7 @@ npm -v'''
 
 find / -type d -name \'node_modules\'
 
-~/node_modules/karma/bin/karma start karma.conf.js'''
+./node_modules/karma/bin/karma start karma.conf.js'''
       }
     }
     stage('Deploy') {
