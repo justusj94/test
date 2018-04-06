@@ -23,11 +23,8 @@ npm -v'''
 #mkdir -p ~/test/*
 #cp tests/* ~/test/*
 
-#find / -type d -name \'karma\'
 ls -lh
-
-npm list -g
-karma start'''
+karma start karma.conf.js'''
       }
     }
     stage('Deploy') {
