@@ -10,6 +10,7 @@ pipeline {
       steps {
         sh '''nodejs --version
 npm -v
+su root
 whoami'''
       }
     }
