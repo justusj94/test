@@ -24,7 +24,7 @@ npm -v'''
 #cp tests/* ~/test/*
 
 ls -lh
-sudo karma start karma.conf.js'''
+karma start karma.conf.js'''
       }
     }
     stage('Deploy') {
