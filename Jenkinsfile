@@ -9,7 +9,8 @@ pipeline {
     stage('Build') {
       steps {
         sh '''nodejs --version
-npm -v'''
+npm -v
+whoami'''
       }
     }
     stage('PHPUnit') {
