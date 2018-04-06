@@ -23,7 +23,7 @@ npm -v'''
 #mkdir -p ~/test/*
 #cp tests/* ~/test/*
 
-find / -type d -name \'karma\'
+#find / -type d -name \'karma\'
 
 ./node_modules/karma/bin/karma start karma.conf.js'''
       }
