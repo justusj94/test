@@ -26,9 +26,9 @@ npm -v'''
 #find / -type d -name \'karma\'
 ls -lh
 
- npm install --save-dev karma karma-jasmine karma-junit-reporter jasmine-core karma-chrome-launcher
+npm install --save-dev karma karma-jasmine karma-junit-reporter jasmine-core karma-chrome-launcher
 npm list -g
-~/node_modules/karma/bin/karma start'''
+/usr/local/lib/node_modules/karma/bin/karma start'''
       }
     }
     stage('Deploy') {
