@@ -18,7 +18,8 @@ pipeline {
 docker run test /bin/bash -c "npm test ; ls /app"
 
 #copy test results from container
-docker cp --rm test:/app/results /'''
+docker cp test:/app/results /
+docker rm test'''
         sh 'ls -lh'
         junit 'results/**/*.xml'
       }
