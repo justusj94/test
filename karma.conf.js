@@ -10,11 +10,11 @@ module.exports = function(config) {
             'karma-junit-reporter',
             'karma-phantomjs-launcher'
         ],
-        preprocessors: ['junit'],
+        preprocessors: {},
+        reporters: ['progress', 'junit'],
         junitReporter: {
             outputFile: 'TestResults.xml'
         },
-        reporters: ['dots'],
         port: 9876,
         colors: true,
         logLevel: config.LOG_INFO,
