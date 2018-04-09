@@ -15,7 +15,7 @@ pipeline {
     stage('Karma Unit Test') {
       steps {
         sh 'docker run --rm test npm test'
-        sh 'ls lh'
+        sh 'ls -lh'
       }
     }
     stage('Deploy') {
