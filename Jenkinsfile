@@ -14,8 +14,13 @@ pipeline {
     }
     stage('Karma Unit Test') {
       steps {
-        sh 'docker run --rm test /bin/bash -c "npm test ; ls /app"'
+        sh '''#run new docker image in container and execute test
+docker run test /bin/bash -c "npm test ; ls /app"
+
+#copy test results from container
+docker cp --rm test:/app/results /'''
         sh 'ls -lh'
+        junit 'results/**/*.xml'
       }
     }
     stage('Deploy') {
