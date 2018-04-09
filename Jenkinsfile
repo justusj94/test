@@ -15,6 +15,7 @@ pipeline {
     stage('Karma Unit Test') {
       steps {
         sh 'docker run --rm test npm test'
+        junit 'TestResults.xml'
       }
     }
     stage('Deploy') {
