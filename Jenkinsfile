@@ -1,17 +1,10 @@
 pipeline {
-  agent {
-    dockerfile {
-      filename 'Dockerfile'
-    }
-    
-  }
+  agent any
   stages {
     stage('Build') {
+      agent any
       steps {
-        sh '''nodejs --version
-npm -v
-pwd
-whoami'''
+        sh 'docker build -t test .'
       }
     }
     stage('PHPUnit') {
@@ -21,11 +14,8 @@ whoami'''
     }
     stage('Karma Unit Test') {
       steps {
-        sh '''#rm -r -f ~/test/*
-#mkdir -p ~/test/*
-#cp tests/* ~/test/*
-pwd
-npm test'''
+        sh 'docker run --rm test npm test'
+        junit 'TestResults.xml'
       }
     }
     stage('Deploy') {
