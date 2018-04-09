@@ -13,6 +13,7 @@ module.exports = function(config) {
         preprocessors: {},
         reporters: ['progress', 'junit'],
         junitReporter: {
+            outputDir: 'results',
             outputFile: 'TestResults.xml'
         },
         port: 9876,
