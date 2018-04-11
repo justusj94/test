@@ -18,16 +18,16 @@ pipeline {
 docker run --name="test" test /bin/bash -c "npm test ; ls /app"
 
 #copy test results from container
-mkdir -p ~/results
-docker cp test:/app/results/* ~/results
+mkdir -p ~/app
+docker cp test:/app/results ~/app
 
-ls ~/results
+ls ~/app
 
 #remove container
 docker rm test
 '''
         sh 'ls -lh'
-        junit '~/results/**/*.xml'
+        junit '~/app/results/**/*.xml'
       }
     }
     stage('Deploy') {
