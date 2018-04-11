@@ -21,7 +21,7 @@ docker run --name="test" test /bin/bash -c "npm test ; ls /app"
 mkdir -p ~/results
 docker cp test:/app/results ~/results
 
-pwd
+ls ~/results
 
 #remove container
 docker rm test
