@@ -27,7 +27,7 @@ pwd
 docker rm test
 '''
         sh 'ls -lh'
-        junit 'results/**/*.xml'
+        junit '~/results/**/*.xml'
       }
     }
     stage('Deploy') {
