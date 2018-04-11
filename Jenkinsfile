@@ -19,7 +19,7 @@ docker run --name="test" test /bin/bash -c "npm test ; ls /app"
 
 #copy test results from container
 mkdir -p ~/results
-docker cp test:/app/results ~/results
+docker cp test:/app/results/* ~/results
 
 ls ~/results
 
