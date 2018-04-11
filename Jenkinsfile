@@ -15,7 +15,7 @@ pipeline {
     stage('Karma Unit Test') {
       steps {
         sh '''#run new docker image in container and execute test
-docker run --name test /bin/bash -c "npm test ; ls /app"
+docker run --name="test" test /bin/bash -c "npm test ; ls /app"
 
 #copy test results from container
 docker cp test:/app/results /
