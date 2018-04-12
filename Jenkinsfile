@@ -27,6 +27,7 @@ ls ~/app
 docker rm test
 '''
         sh 'ls -lh'
+        sh 'cat ~/app/resykts/**/*.xml'
       }
     }
     stage('Deploy') {
