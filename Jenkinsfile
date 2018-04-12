@@ -27,7 +27,7 @@ ls ~/app
 docker rm test
 '''
         sh 'ls -lh'
-        junit '~/app/results/**/*.xml'
+        junit(testResults: 'app/results/**/*.xml', healthScaleFactor: 1)
       }
     }
     stage('Deploy') {
