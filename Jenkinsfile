@@ -57,8 +57,10 @@ docker rm test
     }
   }
   post {
-          always {
-              junit 'app/results/**/*.xml'
-          }
-      }
+    always {
+      junit 'app/results/**/*.xml'
+      
+    }
+    
+  }
 }
