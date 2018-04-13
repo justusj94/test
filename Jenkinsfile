@@ -4,7 +4,8 @@ pipeline {
     stage('Build') {
       agent any
       steps {
-        sh 'docker build -t test .'
+        sh '''pwd
+        docker build -t test .'''
       }
     }
     stage('PHPUnit') {
