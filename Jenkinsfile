@@ -58,7 +58,7 @@ docker rm test'''
   }
   post {
     always {
-      junit './*.xml'
+      junit '$WORKSPACE/**/*.xml'
       
     }
     
