@@ -59,5 +59,6 @@ docker rm test'''
       junit '**/app/results/**/*.xml'
       
     }
+    
   }
 }
