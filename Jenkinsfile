@@ -51,14 +51,14 @@ docker rm test'''
 #ssh -i ~/.ssh/ssh-boomerweb root@stage.boomerweb.nl \'rm -r -f /var/www/stage.boomerweb.nl/justus/pipeline-test/*\'
 #scp -r -i ~/.ssh/ssh-boomerweb ~/deploy/* root@stage.boomerweb.nl:/var/www/stage.boomerweb.nl/justus/pipeline-test
 '''
-        sh '''ls $WORKSPACE/**/*.xml
+        sh '''#ls $WORKSPACE/**/*.xml
 #mv /var/jenkins_home/app/results/**/*.xml ./'''
       }
     }
   }
   post {
     always {
-      junit '$WORKSPACE/**/*.xml'
+      junit 'results/**/*.xml'
       
     }
     
