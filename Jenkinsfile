@@ -51,13 +51,13 @@ docker rm test'''
 #scp -r -i ~/.ssh/ssh-boomerweb ~/deploy/* root@stage.boomerweb.nl:/var/www/stage.boomerweb.nl/justus/pipeline-test
 '''
         sh '''ls /var/jenkins_home/app/results/**/*.xml
-cat /var/jenkins_home/app/results/**/*.xml'''
+mv /var/jenkins_home/app/results/**/*.xml ./'''
       }
     }
   }
   post {
     always {
-      junit '/var/jenkins_home/app/results/**/*.xml'
+      junit './*.xml'
       
     }
     
