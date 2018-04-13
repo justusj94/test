@@ -58,7 +58,7 @@ docker rm test
   }
   post {
           always {
-              junit 'app/results/**/*.xml'
+              junit '/var/jenkins_home/app/results/**/*.xml'
           }
       }
 }
