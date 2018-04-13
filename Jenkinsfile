@@ -21,11 +21,8 @@ docker run --name="test" test /bin/bash -c "npm test ; ls /app"
 mkdir -p ~/app
 docker cp test:/app/results ~/app
 
-ls ~/app
-
 #remove container
-docker rm test
-'''
+docker rm test'''
         sh 'ls -lh'
       }
     }
@@ -53,6 +50,7 @@ docker rm test
 #ssh -i ~/.ssh/ssh-boomerweb root@stage.boomerweb.nl \'rm -r -f /var/www/stage.boomerweb.nl/justus/pipeline-test/*\'
 #scp -r -i ~/.ssh/ssh-boomerweb ~/deploy/* root@stage.boomerweb.nl:/var/www/stage.boomerweb.nl/justus/pipeline-test
 '''
+        sh 'ls /var/jenkins_home/app/results/**/*.xml'
       }
     }
   }
