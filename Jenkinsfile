@@ -25,19 +25,6 @@ docker cp test:/app/results $WORKSPACE
 docker rm test'''
       }
     }
-    stage('UI test') {
-        try {
-            sh "mvn verify -Dtags='type:UI'"
-        } catch (err) {
-
-        } finally {
-            publishHTML (target: [
-            reportDir: 'target/site/serenity',
-            reportFiles: 'index.html',
-            reportName: "UI tests report"
-            ])
-        }
-    }
     stage('Deploy') {
       steps {
         sh '''#git remote set-url origin git@github.com:justusj94/test.git
