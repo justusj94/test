@@ -25,7 +25,7 @@ docker cp test:/app/results $WORKSPACE
 docker rm test'''
       }
     }
-    stage('UI') {
+    stage('UI test') {
         try {
             sh "mvn verify -Dtags='type:UI'"
         } catch (err) {
