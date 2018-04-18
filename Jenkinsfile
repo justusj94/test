@@ -5,7 +5,7 @@ pipeline {
       agent any
       steps {
         sh '''echo $WORKSPACE
-docker build -t php-test .'''
+docker build -t test .'''
       }
     }
     stage('PHPUnit') {
