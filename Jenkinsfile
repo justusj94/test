@@ -8,11 +8,6 @@ pipeline {
 docker build -t test .'''
       }
     }
-    stage('PHPUnit') {
-      steps {
-        sh '#phpunit --bootstrap Email.php tests/EmailTest'
-      }
-    }
     stage('Karma Unit Test') {
       steps {
         sh '''#run new docker image in container and execute test
