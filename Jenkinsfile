@@ -5,7 +5,7 @@ pipeline {
       agent any
       steps {
         sh '''echo $WORKSPACE
-docker build -t test .'''
+docker build -t php-test .'''
       }
     }
     stage('PHPUnit') {
@@ -56,8 +56,8 @@ docker rm test'''
   post {
     always {
       junit 'results/**/*.xml'
-      
+
     }
-    
+
   }
 }
