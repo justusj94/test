@@ -49,7 +49,6 @@ docker rm test'''
 #ssh -i ~/.ssh/ssh-boomerweb root@stage.boomerweb.nl \'rm -r -f /var/www/stage.boomerweb.nl/justus/pipeline-test/*\'
 #scp -r -i ~/.ssh/ssh-boomerweb ~/deploy/* root@stage.boomerweb.nl:/var/www/stage.boomerweb.nl/justus/pipeline-test
 '''
-        cbtSeleniumTest(operatingSystem: 'Safari10', resolution: '1024x768', browser: 'Mac10.12')
       }
     }
   }
