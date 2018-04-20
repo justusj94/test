@@ -11,7 +11,7 @@
 
 FROM selenium/hub
 
-USER root
+#USER root
 
 COPY . /app
 WORKDIR /app
