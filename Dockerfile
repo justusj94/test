@@ -14,5 +14,5 @@ FROM selenium/hub
 COPY . /app
 WORKDIR /app
 
-RUN apt-get update && apt-get install -y nodejs npm
+RUN apt-get update && apt-get install -y apt-transport-https nodejs npm
 RUN npm install && npm install --only=dev
