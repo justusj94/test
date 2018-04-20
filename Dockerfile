@@ -20,5 +20,5 @@ WORKDIR /app
 
 #RUN npm install --save-dev karma@2.0.0 karma-jasmine@1.1.1 karma-junit-reporter@1.2.0 jasmine-core@3.1.0 karma-phantomjs-launcher@1.0.4
 
-RUN wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.33.9/install.sh | bash && nvm install node && nvm use node
+RUN curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.9/install.sh | bash && nvm install node && nvm use node
 RUN npm install --save-dev karma@2.0.0 karma-jasmine@1.1.1 karma-junit-reporter@1.2.0 jasmine-core@3.1.0 karma-phantomjs-launcher@1.0.4
