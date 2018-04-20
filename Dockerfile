@@ -22,7 +22,7 @@ WORKDIR /app
 RUN apt-get update && apt-get install -y curl && curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.9/install.sh | bash
 RUN find / -name nvm.sh && pwd
 
-ENV NVM_DIR /home/root/.nvm
+ENV NVM_DIR /$HOME/.nvm
 RUN source $NVM_DIR/nvm.sh && nvm install node && nvm use node
 #RUN nvm install node && nvm use node
 #RUN npm install karma@2.0.0 karma-jasmine@1.1.1 karma-junit-reporter@1.2.0 jasmine-core@3.1.0 karma-phantomjs-launcher@1.0.4 --save-dev
