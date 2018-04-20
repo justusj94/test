@@ -11,8 +11,7 @@ docker build -t test .'''
     stage('Karma Unit Test') {
       steps {
         sh '''#run new docker image in container and execute test
-docker run --name="test" test /bin/bash -c 
-"nvm install node && nvm use node ;
+docker run --name="test" test /bin/bash -c "nvm install node && nvm use node ; 
 npm install --save-dev karma@2.0.0 karma-jasmine@1.1.1 karma-junit-reporter@1.2.0 jasmine-core@3.1.0 karma-phantomjs-launcher@1.0.4 ;
 npm test"
 
