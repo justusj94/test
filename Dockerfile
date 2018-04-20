@@ -7,7 +7,7 @@
 #COPY . /app
 #WORKDIR /app
 #RUN apt-get update && npm install && npm install --only=dev
-#RUN npm install -g karma@2.0.0 karma-jasmine@1.1.1 karma-juniFROM selenium/hub
+#RUN npm install -g karma@2.0.0 karma-jasmine@1.1.1 karma-junit
 
 FROM selenium/hub
 
@@ -17,4 +17,4 @@ COPY . /app
 WORKDIR /app
 
 RUN apt-get update && apt-get install -y nodejs npm
-RUN npm install --only=dev
+RUN npm install --save-dev karma@2.0.0 karma-jasmine@1.1.1 karma-junit-reporter@1.2.0 jasmine-core@3.1.0 karma-phantomjs-launcher@1.0.4
