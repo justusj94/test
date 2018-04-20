@@ -16,7 +16,7 @@ USER root
 COPY . /app
 WORKDIR /app
 
-ENV NVM_DIR /usr/local/nvm
+#ENV NVM_DIR /usr/local/nvm
 
 #RUN apt-get update && apt-get install -y nodejs npm
 
