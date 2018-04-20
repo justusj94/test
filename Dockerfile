@@ -17,4 +17,4 @@ COPY . /app
 WORKDIR /app
 
 RUN apt-get update && apt-get install -y nodejs npm
-RUN npm install && npm install --only=dev
+RUN npm install --only=dev
