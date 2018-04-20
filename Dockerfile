@@ -14,4 +14,4 @@ FROM selenium/hub
 COPY . /app
 WORKDIR /app
 
-RUN apt-get update && apt-get install nodejs && npm install && npm install --only=dev
+RUN apt-get update && apt-get install nodejs npm && npm install && npm install --only=dev
