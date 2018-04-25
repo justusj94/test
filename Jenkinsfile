@@ -14,36 +14,16 @@ docker build -t test .'''
 docker run --name="test" test /bin/bash -c "npm test"
 
 #copy test results from container
-docker cp test:/app/results $WORKSPACE
+docker cp test:/app/results $WORKSPACE'''
+      }
+    }
+    stage('Selenium Acceptence Test') {
+      steps {
+        sh '''#selenium test
+docker run --name="test" test /bin/bash -c "node selenium-tests/google_search.js"
 
 #remove container
 docker rm test'''
-      }
-    }
-    stage('Deploy') {
-      steps {
-        sh '''#git remote set-url origin git@github.com:justusj94/test.git
-#git remote add upstream git@github.com:justusj94/test.git
-
-#move to master branch and pull from test
-#git checkout master
-#git remote set-url origin git@github.com:justusj94/test.git
-#git pull origin test
-
-#merge test with master branch
-#git merge --no-ff test 
-#git push -u master
-
-#cd /var/lib/jenkins
-#remove and create deploy folder
-#rm -r -f ~/deploy
-#mkdir -p ~/deploy
-
-#clone repository and deploy to remote server
-#git clone https://github.com/justusj94/test.git ~/deploy
-#ssh -i ~/.ssh/ssh-boomerweb root@stage.boomerweb.nl \'rm -r -f /var/www/stage.boomerweb.nl/justus/pipeline-test/*\'
-#scp -r -i ~/.ssh/ssh-boomerweb ~/deploy/* root@stage.boomerweb.nl:/var/www/stage.boomerweb.nl/justus/pipeline-test
-'''
       }
     }
   }
