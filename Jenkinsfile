@@ -20,7 +20,7 @@ docker cp test:/app/results $WORKSPACE'''
     stage('Selenium Acceptence Test') {
       steps {
         sh '''#selenium test
-docker exec -i -t test /bin/bash -c "node selenium-tests/google_search.js"
+docker exec -it test /bin/bash -c "node selenium-tests/google_search.js"
 
 #remove container
 docker rm test'''
