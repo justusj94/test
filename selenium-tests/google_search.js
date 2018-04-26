@@ -66,7 +66,7 @@ const {Builder, By, Key} = require('selenium-webdriver');
 (async function example() {
     //let driver = await new Builder().forBrowser('chrome').build();
     console.log('Start Google search test');
-    let driver = await new Builder().forBrowser('firefox').usingServer('http://127.0.0.l:4444/wd/hub').build();
+    let driver = await new Builder().forBrowser('firefox').usingServer('http://172.17.0.3:4444/wd/hub').build();
     try {
         await driver.get('http://www.google.com/ncr');
         console.log('Search for webdriver');
