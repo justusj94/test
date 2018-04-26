@@ -14,7 +14,7 @@ docker build -t test .'''
 #and selenium acceptance test
 docker run -d --name="test" test /bin/bash -c "npm test"
 
-docker exec -it test /bin/bash -c "node selenium-tests/google_search.js"
+docker exec -it test /bin/bash "node selenium-tests/google_search.js"
 
 
 #copy test results from container
