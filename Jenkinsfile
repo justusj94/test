@@ -14,6 +14,9 @@ docker build -t test .'''
 #and selenium acceptance test
 docker run --network bridge --name="test" test /bin/bash -c "npm test && node selenium-tests/google_search.js"
 
+docker run --network bridge --name="test" test /bin/bash -c "npm test && node selenium-tests/google_search.js"
+
+
 #copy test results from container
 docker cp test:/app/results $WORKSPACE
 
