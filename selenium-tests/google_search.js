@@ -5,7 +5,7 @@ const browsers = ['firefox', 'chrome'];
     //for(let x = 0; x < x.length ; x++) {
     //let driver = await new Builder().forBrowser('chrome').build();
     //console.log('Start Google search test on ' + browsers[x]);
-    let driver = await new Builder().forBrowser('chrome').usingServer('http://172.17.0.3:4444/wd/hub').build(); //http://172.17.0.3:4444/wd/hub
+    let driver = await new Builder().forBrowser('firefox').usingServer('http://172.17.0.3:4444/wd/hub').build(); //http://172.17.0.3:4444/wd/hub
     try {
         await driver.get('http://www.google.com/ncr');
         console.log('Search for webdriver');
