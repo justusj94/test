@@ -13,7 +13,7 @@ const browsers = [
 (async function example() {
     for(let x = 0; x < browsers.length ; x++) {
         console.log('Start Google search test on ' + browsers[x][0]);
-        let driver = await new Builder().forBrowser(browsers[x][0]).usingServer('http://127.0.0.1:4444/wd/hub').build();
+        let driver = await new Builder().forBrowser(browsers[x][0]).usingServer('http://172.17.0.3:4444/wd/hub').build();
 
 
         try {
