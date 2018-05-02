@@ -6,10 +6,10 @@ logging.getLogger('webdriver.http').setLevel(logging.Level.DEBUG);
 //Browser and button to press in google.nl
 const browsers = [
     ['chrome', 'btnG'],
-    ['firefox', 'btnG']
+    ['firefox', 'btnK']
 ];
 
-const server = 'http://localhost:4444/wd/hub';
+const server = 'http://172.17.0.3:4444/wd/hub'; //172.17.0.3
 
 (async function example() {
     for(let x = 0; x < browsers.length ; x++) {
