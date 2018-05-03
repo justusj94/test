@@ -9,12 +9,15 @@ const browsers = [
     ['firefox', 'btnK']
 ];
 
-const server = 'http://172.17.0.3:5555/wd/hub'; //172.17.0.3
+const servers = [
+    'http://172.17.0.3:5555/wd/hub',
+    'http://172.17.0.4:5555/wd/hub'
+];
 
 (async function example() {
     for(let x = 0; x < browsers.length ; x++) {
         console.log('Start Google search test on ' + browsers[x][0]);
-        let driver = await new Builder().forBrowser(browsers[x][0]).usingServer(server).build();
+        let driver = await new Builder().forBrowser(browsers[x][0]).usingServer(servers[x]).build();
 
 
         try {
