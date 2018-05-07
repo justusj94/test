@@ -12,7 +12,7 @@ docker build -t test .'''
       steps {
         sh '''#run new docker image in container and execute karma test
 #and selenium acceptance test
-docker run --name="test" test /bin/bash -c "npm test && node selenium-tests/google_search.js && node casperjs-tests/sample.js"
+docker run --name="test" test /bin/bash -c "npm test && node selenium-tests/google_search.js && node casperjs.js casperjs-tests/sample.js"
 
 
 #copy test results from container
