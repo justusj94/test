@@ -23,8 +23,8 @@ const servers = [
         try {
             await driver.get('http://www.google.com/ncr');
             console.log('Search for webdriver');
-            await driver.findElement(By.id('q')).sendKeys('webdriver', Key.RETURN);
-            await driver.findElement(By.id(browsers[x][1])).click();
+            await driver.findElement(By.name('q')).sendKeys('webdriver', Key.RETURN);
+            await driver.findElement(By.name(browsers[x][1])).click();
             await driver.wait(check_title(driver), 1000);
         } finally {
             await driver.quit();
