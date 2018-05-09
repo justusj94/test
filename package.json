@@ -19,6 +19,9 @@
   },
   "homepage": "https://github.com/justusj94/test#readme",
   "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-server-livereload": "^1.9.2",
+    "gulp-util": "^3.0.8",
     "jasmine-core": "^3.1.0",
     "karma": "^2.0.0",
     "karma-jasmine": "^1.1.1",
@@ -26,9 +29,11 @@
     "karma-phantomjs-launcher": "^1.0.4"
   },
   "dependencies": {
+    "casperjs": "^1.1.4",
     "chromedriver": "^2.38.0",
+    "gulp-webserver": "^0.9.1",
+    "http": "0.0.0",
     "jasmine": "^3.1.0",
-    "phantomjs": "^2.1.7",
     "selenium-webdriver": "^4.0.0-alpha.1",
     "webdriverjs": "^1.7.5"
   },
