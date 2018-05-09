@@ -10,8 +10,8 @@ const browsers = [
 ];
 
 const servers = [
-    '172.17.0.4:5555/wd/hub',    // Chrome
-    '172.17.0.5:5555/wd/hub'     // Firefox
+    'http://172.17.0.4:5555/wd/hub',    // Chrome
+    'http://172.17.0.5:5555/wd/hub'     // Firefox
 ];
 
 (async function example() {
